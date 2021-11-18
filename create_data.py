@@ -67,10 +67,10 @@ def create_data(path_data: str, path_save: str, snr: SNR = SNR.ZERO, recreate: b
                                              rec_place=RecPlace.b)
 
         # extract the spectrograms as well as labels and raw audio frames
-        specs_all, specs_np_all, labels_all, frames_all = get_spectrograms_all_files(wav_files_train[0:3],
+        specs_all, specs_np_all, labels_all, frames_all = get_spectrograms_all_files(wav_files_train,
                                                                                      path_save, snr)
         specs_all_test, specs_np_all_test, labels_all_test, frames_all_test = get_spectrograms_all_files(
-            wav_files_test[0:2], path_save, snr)
+            wav_files_test, path_save, snr)
 
         # reshape the data to fit the model input
         x_train, y_train = reshape_specs(specs_np_all, labels_all)
