@@ -1,9 +1,9 @@
 import numpy as np
-import tensorflow.python.keras.callbacks
+import tensorflow.keras.callbacks
 from matplotlib import pyplot as plt
 
 
-def plot_history(history: tensorflow.python.keras.callbacks.History) -> None:
+def plot_history(history: tensorflow.keras.callbacks.History) -> None:
     """
     Method to plot the training and validation accuracy over the different epochs.
     Args:
